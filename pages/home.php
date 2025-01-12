@@ -1,37 +1,28 @@
-<section class="background-principal">
+    <section class="background-principal">
 
+       
+        <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/foto1.jpg')" class="banner-sigle"></div>
+        <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/download (1).jpeg')" class="banner-sigle"></div>
+        <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/images.jpeg')" class="banner-sigle"></div>
+            
+        <div class="over"></div>
+        <div class="center">
 
-    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/foto1.jpg')" class="banner-sigle"></div>
-    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/download (1).jpeg')" class="banner-sigle"></div>
-    <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/images.jpeg')" class="banner-sigle"></div>
         
-    <div class="over"></div>
-    <div class="center">
 
+
+        <form id="form-email" method="POST" action="">
+        <h2>Qual seu melhor e-mail</h2>
     
-    
-<?php
-    $inputHandler = new InputHandler();
-    if (isset($_POST['email'])){
-        $Email = new Email();
-        $Email->createEmail($email);  
-        echo 'foi';
-    }
-?>
+        <input type="email" name="email" id="email" required>
+        <input type="submit" name="acao" value="Enviar">
+    </form>
 
-
-    <form id="form-email" method="POST" action="">
-    <h2>Qual seu melhor e-mail</h2>
-  
-    <input type="email" name="email" id="email" required>
-    <input type="submit" name="acao" value="Enviar">
-</form>
-
-        </div>
-       
-       
-       
-    </section>
+            </div>
+        
+        
+        
+        </section>
 
     <section class="descricao-autor">
         <div class="center">
@@ -83,7 +74,7 @@
         </section>
 
 
-        < class="extras">
+        <section class="extras">
             <div class="center">
             <div id="depoimento" class="w50 left">
                 <h2 class="titulo">Depoimentos</h2>

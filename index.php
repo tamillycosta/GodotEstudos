@@ -26,6 +26,12 @@ error_reporting(E_ALL);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="plavras-chave, do, meu ,site">
     <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/contato.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/404.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/alert.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/boot.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH;?>css/mediaQuery.css">
+
     <title>Document</title>
 </head>
 
@@ -44,6 +50,16 @@ switch ($url) {
 
 
 <body>
+    <div class="loader">
+            <img src="<?php echo INCLUDE_PATH; ?>images/gif.gif" alt="">
+    </div>
+    
+    <div class="alert">
+    <i class="fas fa-check"></i>
+    <span class="alert-title">Successo</span>
+    <span class="alert-subtitle">Criado com sucesso!
+    </span>
+</div>
 
     <header>
             <div class="center">
