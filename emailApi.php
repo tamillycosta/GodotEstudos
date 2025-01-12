@@ -1,5 +1,8 @@
 <?php
-include 'config/config.php';
+include'config/config.php';
+
+
+
 
 header('Content-Type: application/json');
 ini_set('display_errors', 1);
@@ -9,10 +12,9 @@ error_reporting(E_ALL);
 if (isset($_POST['email'])) {
     $email = $_POST['email'];
 
-    // Instanciando a classe InputHandler para verificar o email
+
     $inputHandler = new InputHandler();
 
-    // Verifica se o email é válido
     if ($inputHandler->emailVerify($email)) {
         $Email = new Email();
         $Email->createEmail($email); 
