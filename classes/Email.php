@@ -38,9 +38,9 @@ class Email{
         // Aqui eu substituí "$username" por "$email" já que parece que você está recebendo o e-mail como parâmetro
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $this->mail->addAddress($email); // Verifica se o e-mail é válido
-            $this->data = ['status' => 'success', 'message' => 'E-mail adicionado'];
+            $this->data['sucesso'] = true;
         } else {
-            $this->data = ['status' => 'error', 'message' => 'E-mail inválido'];
+            $this->data['erro'] = true;
         }
         // Retorna a resposta em JSON
         die(json_encode($this->data));

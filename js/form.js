@@ -1,57 +1,38 @@
 $(function () {
-    $('#form-contato').on('submit', function (e) {
+    urlAtual = window.location.href;   
+    if(urlAtual == 'http://localhost/Web-Page-PHP-/'){
+       urlLocal = 'http://localhost/Web-Page-PHP-/emailApi.php';
+       formAtual = '#form-email';
+    }else if(urlAtual == 'http://localhost/Web-Page-PHP-/Contato'){
+        urlLocal = 'http://localhost/Web-Page-PHP-/contatoApi.php';
+        formAtual = '#form-contato';
+    }
+
+    $(formAtual).on('submit', function (e) {
         e.preventDefault();
 
         var form = $(this);
         $.ajax({
-            url: "http://localhost/Web-Page-PHP-/contatoApi.php",
+            beforeSend:function(){
+                $('.loader').fadeIn(2000);
+            },
+            url: urlLocal,
             type: "POST",
             data: form.serialize(),
-            success: function (response) {
-                try {
-                    if (response.sucesso) {
-                        alert("Contato enviado com sucesso!");
-                    } else if (response.erro) {
-                        alert("Erro: " + response.erro);
-                    }
-                } catch (error) {
-                    console.error("Erro ao analisar resposta JSON:", error);
-                    alert("Erro ao processar a resposta do servidor.");
-                }
-            },
-            error: function () {
-                alert("Erro ao fazer a requisição AJAX.");
-            }
+           
+        }).done(function(data){
+           if(data.sucesso){
+            $('.loader').fadeOut(2000);
+            $('.alert').fadeIn(2000);
+           }
+          else if(data.erro){
+            $('.loader').fadeOut(2000);
+            $('.alert').fadeIn(2000);
+          }
+          $('.alert').fadeOut(2000);
+           
         });
     });
 
-
-
-    $('#form-email').on('submit', function (e){
-        e.preventDefault();
-
-        var form = $(this);
-        $.ajax({
-            url: "http://localhost/Web-Page-PHP-/emailApi.php",
-            type: "POST",
-            data: form.serialize(),
-            
-            success: function (response) {
-                try {
-                    if (response.sucesso) {
-                        alert("Contato enviado com sucesso!");
-                    } else if (response.erro) {
-                        alert("Erro: " + response.erro);
-                    }
-                } catch (error) {
-                    console.error("Erro ao analisar resposta JSON:", error);
-                    alert("Erro ao processar a resposta do servidor.");
-                }
-            },
-            error: function () {
-                alert("Erro ao fazer a requisição AJAX.");
-            }
-        });
-    });
     
 });
