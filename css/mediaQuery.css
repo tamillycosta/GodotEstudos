@@ -1,0 +1,85 @@
+
+@media screen and (max-width: 880px) {
+    img {
+        float: none;
+        display: block;
+        margin:0 auto;
+        max-width: 500px;
+    }
+
+    .w50{
+        
+        padding: 20px;
+        width: 100%;
+      
+    }
+}
+
+
+
+@media screen and (max-width: 740px){
+
+    nav.mobile{
+        display: block;
+    }
+
+    nav.mobile ul{
+        display: none;
+    }
+
+    nav.desktop{
+        display: none;
+    }
+
+    nav.mobile ul {
+        top: 55px;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        background: #fff;      
+       
+        text-align: center;
+       
+    }
+
+    nav.mobile li {
+        width: 100%;
+        display: block;
+        background: #fff;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding: 8px 0;
+        
+    }
+
+    nav.mobile a{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 300;
+        color: #333;
+    }
+
+    .botao-mobile{
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+        display: block;
+    }
+
+}
+
+    @media screen and (max-width:1000px){
+       .box-especialidade{
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 100px;
+        float: none;
+        text-align: center;
+       }
+
+       .especialidades h2{
+        margin-bottom: 40px;
+       }
+    }
+
