@@ -14,7 +14,9 @@ if (isset($_POST['email'])) {
    
     if ($inputHandler->emailVerify($email)) {
         $Email = new Email();
+        $Email->enviar('tamillycosta899@gmail.com','novo contato',$email);
         $Email->createEmail($email); 
+
         echo json_encode(['sucesso' => 'E-mail enviado com sucesso!']);
     } else {
         echo json_encode(['erro' => 'E-mail inválido']);
