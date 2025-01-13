@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://kit.fontawesome.com/4367d2e41a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>../login.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>css/login.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Controle</title>
