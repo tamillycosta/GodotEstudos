@@ -13,7 +13,7 @@ class Email{
     public function enviar($para, $assunto, $mensagem):void{
        
         try {
-           
+        
             $this->mail->isSMTP();
             $this->mail->Host = 'live.smtp.mailtrap.io';
             $this->mail->SMTPAuth = true;
@@ -29,6 +29,7 @@ class Email{
             $this->mail->Body = $mensagem;
 
             $this->mail->send();
+            
         } catch (Exception $e) {
             echo "Erro ao enviar e-mail: {$this->mail->ErrorInfo}";
         }

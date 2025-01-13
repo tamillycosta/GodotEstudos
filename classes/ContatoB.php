@@ -18,8 +18,10 @@ class ContatoB{
       $this->email = $email;
       $this->telefone = $telefone;
       $this->mensagem = $mensagem;
-   
+    }
 
+    public function __tostring():string{
+        return ''. $this->nome .''. $this->email .''. $this->telefone .''. $this->mensagem;
     }
 
     public function criarContato(mysqli $conn):void{
