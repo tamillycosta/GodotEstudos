@@ -1,12 +1,7 @@
 <?php
-$Db = new Db('localhost','root','','modulo8');
-    
-    try{
-    $conn = $Db->connect();
-   
-   
-    }catch (Exception $e){
-        
-    }
+define('HOST','localhost');
+define('USERNAME','root');
+define('PASSWORD','');
+define('DATABASE','modulo8');
 
 ?>

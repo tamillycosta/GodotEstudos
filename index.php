@@ -1,4 +1,4 @@
-<?php include 'config/config.php';
+<?php include 'config.php';
 include 'dbConection.php';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -10,6 +10,8 @@ error_reporting(E_ALL);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!--fontawesome-->
 <script src="https://kit.fontawesome.com/4367d2e41a.js" crossorigin="anonymous"></script>
 
   <!-- Adicionando jQuery local -->

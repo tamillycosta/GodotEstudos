@@ -1,4 +1,5 @@
 <?php
+session_start();
 require __DIR__ . '/vendor/autoload.php'; // Caminho relativo ao autoloader do Composer
 
 $autoloud = function($class): void {
@@ -19,7 +20,7 @@ $autoloud = function($class): void {
 spl_autoload_register($autoloud);
 
 define('INCLUDE_PATH', 'http://localhost/Web-Page-PHP-/');
-
+define('INCLUDE_PAINEL_PATH', INCLUDE_PATH.'painel/');
 
 
 
