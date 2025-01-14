@@ -55,7 +55,7 @@ switch ($url) {
     <div class="loader">
             <img src="<?php echo INCLUDE_PATH; ?>images/gif.gif" alt="">
     </div>
-    
+  
     <div class="alert">
     <i class="fas fa-check"></i>
     <span class="alert-title">Successo</span>

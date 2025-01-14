@@ -1,10 +1,10 @@
 $(function () {
     urlAtual = window.location.href;   
     if(urlAtual == 'http://localhost/Web-Page-PHP-/'){
-       urlLocal = 'http://localhost/Web-Page-PHP-/emailApi.php';
+       urlLocal = 'http://localhost/Web-Page-PHP-/Json/emailApi.php';
        formAtual = '#form-email';
     }else if(urlAtual == 'http://localhost/Web-Page-PHP-/Contato'){
-        urlLocal = 'http://localhost/Web-Page-PHP-/contatoApi.php';
+        urlLocal = 'http://localhost/Web-Page-PHP-/Json/contatoApi.php';
         formAtual = '#form-contato';
     }
 
