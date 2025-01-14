@@ -23,22 +23,21 @@ try {
 
 $AdmB = new AdmB($conn);
 if(isset($_POST['acao'])){
-    $nome = $_POST['nome'];
+    $username = $_POST['nome'];
     $senha = $_POST['senha'];
-    if($AdmB->Buscar($nome, $senha)){
+    if($AdmB->Buscar($username, $senha)){
         $_SESSION['login'] = true;
-        $_SESSION['user'] = $user;
+        $_SESSION['username'] = $username;
         $_SESSION['senha'] = $senha;
+
         header(  'Location: '.INCLUDE_PAINEL_PATH);
         die();
     }
     else{
        echo '<div class="error-alert hide">Usuario ou Senha incorretos</div>';
-    }
+ }
     
 }
-
-
 ?>
     <section>
 
