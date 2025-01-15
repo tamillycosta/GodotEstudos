@@ -6,7 +6,7 @@ $(function(){
             $('.bars').off('click').on('click', function() {
                 var listaMenu = $('.side-menu');
                 var header = $('.nav-adm');
-                var mainContainer = $('.dashBoard');    
+                var mainContainer = $('.main-container');    
 
                 if (listaMenu.is(':visible')) {
                     listaMenu.animate({ width: '0' }, 500, function() {
@@ -18,7 +18,7 @@ $(function(){
                 } else {
                     listaMenu.show().animate({ width: '20%' }, 500);
                     header.animate({ width: '80%' , marginLeft: '20%'}, 490);
-                    mainContainer.animate({ width: '80%', marginLeft: '20%' }, 470);
+                    mainContainer.animate({ width: '70%', marginLeft: '25%' }, 470);
                 }
             });
         } else {  // Mobile
