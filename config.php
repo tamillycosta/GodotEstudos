@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('America/Sao_Paulo');
 require __DIR__ . '/vendor/autoload.php'; // Caminho relativo ao autoloader do Composer
 
 $autoloud = function($class): void {

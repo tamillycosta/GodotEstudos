@@ -12,7 +12,7 @@ if(isset($_GET['loggout'])){
       <!-- Adicionando jQuery local -->
   <script src=" <?php echo INCLUDE_PATH; ?>js/config/jquery-3.7.1.min.js"></script>
     <script src="<?php echo INCLUDE_PAINEL_PATH;?>js/sideBar.js"></script>
-    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>style.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel Controle</title>
@@ -23,7 +23,10 @@ if(isset($_GET['loggout'])){
     <div class="bars">
     <i class="fa-solid fa-bars"></i>
     </div>
+    <div>
+    <a href="<?php echo INCLUDE_PAINEL_PATH;?>"><i class="fa-solid fa-house"></i></a>
     <a href="<?php echo INCLUDE_PAINEL_PATH;?>?loggout=true"><i class="fa-solid fa-right-from-bracket"></i></a>
+    </div>
 </header>
 
 

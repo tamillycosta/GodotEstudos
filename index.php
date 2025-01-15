@@ -1,9 +1,12 @@
-<?php include 'config.php';
+<?php 
+include 'config.php';
 include 'dbConection.php';
+$Site = new Site();
+$Site->updateUsuarioOnline();
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
 
 ?>
 
