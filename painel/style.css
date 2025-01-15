@@ -66,6 +66,17 @@ color:  #141a1d;
     padding-bottom: 10px;
 }
 
+.user-img{
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+}
+
+.user-img img{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+}
 
 
 .side-menu ul{

@@ -45,7 +45,7 @@ if(isset($_GET['loggout'])){
          </div>
         <ul>
             <li class="categoria">CADASTROS</li>
-            <li><a href="">CADASTRAR SERVIÇOS</a></li>
+            <li><a href="<?php echo INCLUDE_PAINEL_PATH;?>cadastrar-servico">CADASTRAR SERVIÇOS</a></li>
             <li><a href="">CADASTRAR DEPOIMENTO</a></li>      
             <li><a href="">CADASTRAR SLIDES</a></li>   
              
@@ -77,28 +77,10 @@ if(isset($_GET['loggout'])){
         </ul>
 </div>
 
+<?php
+ Painel::carregarPagina();
 
-    <section class="dashBoard">
+?>
 
-    <div class="dashboard-elements">
-        <h2>10 Usuarios Online!</h2>
-        <i class="fa-solid fa-users"></i>
-        
-    </div>
-
-    <div class="dashboard-elements">
-        <h2>10 Total de Visitas!</h2>
-        <i class="fa-solid fa-envelope"></i>
-        
-    </div>
-
-    <div class="dashboard-elements">
-        <h2>10 Visitas Hoje!</h2>
-        <i class="fa-solid fa-phone"></i>
-    
-    </div>
-
-    </section>
-    
 </body>
 </html>
