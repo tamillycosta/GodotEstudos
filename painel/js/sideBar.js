@@ -6,7 +6,7 @@ $(function(){
             $('.bars').off('click').on('click', function() {
                 var listaMenu = $('.side-menu');
                 var header = $('.nav-adm');
-                var mainContainer = $('.dashBoard');
+                var mainContainer = $('.dashBoard');    
 
                 if (listaMenu.is(':visible')) {
                     listaMenu.animate({ width: '0' }, 500, function() {
