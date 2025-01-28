@@ -16,3 +16,46 @@ Este é um projeto de demonstração de um **formulário de contato dinâmico** 
 - **Backend**: PHP 
 - **Banco de Dados**: MySQL
 - **Serviços**: Apache (XAMPP/LAMP)
+ 
+## Configurações e Instalação
+
+- Pré-requisitos : PHP versão 7.3 ou superior.
+- Composer .
+
+## Instalando
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/web-page-php.git
+
+2. Navegue até o diretório do projeto:
+   ```bash
+       cd web-page-php
+3. Instale as dependências do projeto usando o Composer:
+    ```bash
+       composer install
+4. Certifique-se de incluir o autoloader do Composer no arquivo principal do seu projeto:
+    ```bash
+      require 'vendor/autoload.php';
+
+## Estrutura de Diretórios
+
+web-page-php/
+├── public/         # Arquivos públicos (frontend)
+│   ├── css/        
+│   ├── js/      
+|   ├── pages/     # Arquivos html do site
+|   ├── painel/    # Arquivos html do painel de controle
+│   ├── images/     
+│    
+├── src/            # Código do backend (PHP)
+│   ├── controllers/
+│   ├── models/
+|   ├── exceptions/   
+│   └── repositories/
+├── vendor/         # Dependências instaladas pelo Composer
+├── composer.json   # Configuração do Composer
+└── README.md       # Documentação do projeto
+└── index.php       # Entrada inicial do site
+
+
