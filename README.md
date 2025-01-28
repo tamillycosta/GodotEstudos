@@ -38,24 +38,5 @@ Este é um projeto de demonstração de um **formulário de contato dinâmico** 
     ```bash
       require 'vendor/autoload.php';
 
-## Estrutura de Diretórios
-
-web-page-php/
-├── public/         # Arquivos públicos (frontend)
-│   ├── css/        
-│   ├── js/      
-|   ├── pages/     # Arquivos html do site
-|   ├── painel/    # Arquivos html do painel de controle
-│   ├── images/     
-│    
-├── src/            # Código do backend (PHP)
-│   ├── controllers/
-│   ├── models/
-|   ├── exceptions/   
-│   └── repositories/
-├── vendor/         # Dependências instaladas pelo Composer
-├── composer.json   # Configuração do Composer
-└── README.md       # Documentação do projeto
-└── index.php       # Entrada inicial do site
 
 
