@@ -1,13 +1,14 @@
 $(function () {
     urlAtual = window.location.href;   
-    if(urlAtual == 'http://localhost/Web-Page-PHP-/'){
-       urlLocal = 'http://localhost/Web-Page-PHP-/Json/emailApi.php';
+    if(urlAtual == 'http://localhost/Web-Page-PHP/'){
+       urlLocal = 'http://localhost/Web-Page-PHP/Json/emailApi.php';
        formAtual = '#form-email';
-    }else if(urlAtual == 'http://localhost/Web-Page-PHP-/Contato'){
-        urlLocal = 'http://localhost/Web-Page-PHP-/Json/contatoApi.php';
+    }else if(urlAtual == 'http://localhost/Web-Page-PHP/Contato'){
+        urlLocal = 'http://localhost/Web-Page-PHP/Json/contatoApi.php';
         formAtual = '#form-contato';
     }
 
+    
     $(formAtual).on('submit', function (e) {
         e.preventDefault();
 

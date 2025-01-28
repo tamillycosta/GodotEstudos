@@ -1,12 +1,17 @@
 <?php 
-include 'config.php';
-include 'dbConection.php';
-$Site = new Site();
-$Site->updateUsuarioOnline();
 
+require_once __DIR__ . '/vendor/autoload.php';
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
+use Milly\WebPagePhp\controllers\SiteController;
+include 'config.php';
+include 'dbConection.php';
+$Site = new SiteController();
+$Site->updateUsuarioOnline();
+$Site->SetUserCookie();
+
 
 ?>
 
@@ -86,8 +91,8 @@ switch ($url) {
                     <ul>
                     <li><a href="<?php echo INCLUDE_PATH;?>">Home</a></li>
                         <li><a href="<?php echo INCLUDE_PATH;?>Depoimento">Depoimento</a></li>
-                        <li><a href=" <?php echo INCLUDE_PATH;?> Servicos">Serviços</a></li>
-                        <li><a href="<?php echo INCLUDE_PATH;?> Contato">Contato</a></li>
+                        <li><a href=" <?php echo INCLUDE_PATH;?>Servicos">Serviços</a></li>
+                        <li><a href="<?php echo INCLUDE_PATH;?>Contato">Contato</a></li>
                     </ul>
                 </nav>
                 <div class="clear"></div>
