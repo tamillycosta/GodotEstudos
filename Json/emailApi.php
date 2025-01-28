@@ -1,10 +1,13 @@
 <?php
-include '../config.php';
 
+use Milly\WebPagePhp\exceptions\InputHandler;
+use Milly\WebPagePhp\models\Email;
+include '../config.php';
 
 header('Content-Type: application/json');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
 $inputHandler = new InputHandler();
 
 // Adiciona verificação para garantir que o email foi enviado

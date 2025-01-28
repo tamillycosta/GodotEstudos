@@ -1,20 +1,16 @@
 <?php
-
 header('Content-Type: application/json');
+use Milly\WebPagePhp\controllers\ContatoController;
+use Milly\WebPagePhp\exceptions\InputHandler;
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 include '../config.php';
 include '../dbConection.php';
 
 $inputHandler = new InputHandler();
 
-try {
-    $Db = new Db(HOST,USERNAME,PASSWORD,DATABASE);
-    $conn = $Db->connect();
-  
-} catch (Exception $e) {
-    echo json_encode(['erro' => 'Erro ao conectar ao banco']);
-   
-}
 
 if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['mensagem'])) {
     $nome = $_POST['nome'];
@@ -23,9 +19,9 @@ if (isset($_POST['nome'], $_POST['email'], $_POST['telefone'], $_POST['mensagem'
     $mensagem = $_POST['mensagem'];
 
     if ($inputHandler->emailVerify($email) && $inputHandler->phoneVerify($telefone)) {
-        $Contato = new ContatoB($nome, $email, $telefone, $mensagem);
-        $Contato->chamarApi($conn);
-        $mensagem = $Contato->__tostring();
+        $Contato = new ContatoController();
+        $Contato->callApi($nome, $email, $telefone, $mensagem);
+
         
     } else {
         echo json_encode(['erro' => 'Dados inválidos']);
