@@ -1,0 +1,44 @@
+/* erro-alert*/
+
+@keyframes example {
+    from {opacity: 1;}
+    to {opacity: 0; }
+  }
+  
+
+  
+.error-alert {
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color: #f8d7da;
+    color: #842029;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f5c2c7;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    opacity: 0; 
+    animation-name: example;
+    animation-duration: 4s;
+    
+}
+
+.sucess-alert {
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: 200;
+    background-color: #f8d7da;
+    color: #318f0b;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #f5c2c7;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    opacity: 0; 
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+

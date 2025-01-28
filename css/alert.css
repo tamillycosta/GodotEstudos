@@ -1,6 +1,5 @@
 
 
-
 /* pagina de carregamento*/
 .loader{
     width: 100%;
@@ -19,7 +18,6 @@
     transform: translateX(-50%);
 
 }
-
 
 
 .alert{

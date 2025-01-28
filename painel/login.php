@@ -1,36 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <script src="https://kit.fontawesome.com/4367d2e41a.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>css/login.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painel Controle</title>
-</head>
-<body>
-
-
 <?php
-include '../dbConection.php';
-try {
-    $Db = new Db(HOST,USERNAME,PASSWORD,DATABASE);
-    $conn = $Db->connect();
-  
-} catch (Exception $e) {
-    echo json_encode(['erro' => 'Erro ao conectar ao banco']);
-   
-}
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+use Milly\WebPagePhp\controllers\AdmController;
 
-$AdmB = new AdmB($conn);
+$AdmB = new AdmController();
 if(isset($_POST['acao'])){
     $username = $_POST['nome'];
     $senha = $_POST['senha'];
-    if($AdmB->Buscar($username, $senha)){
-        $_SESSION['login'] = true;
-        $_SESSION['username'] = $username;
-        $_SESSION['senha'] = $senha;
-
-        header(  'Location: '.INCLUDE_PAINEL_PATH);
+    if($AdmB->Login($username, $senha)){
+         
+        header('Location: '.INCLUDE_PAINEL_PATH);
         die();
     }
     else{
@@ -39,6 +19,21 @@ if(isset($_POST['acao'])){
     
 }
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/4367d2e41a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>css/login.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PAINEL_PATH;?>css/alerts.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Controle</title>
+</head>
+<body>
+
+
     <section>
 
     

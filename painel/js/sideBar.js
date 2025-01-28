@@ -2,7 +2,7 @@ $(function(){
     function checkWindowSize() {
         var windowSize = $(window).width();
         
-        if (windowSize > 880) {  // Desktop
+        if (windowSize > 1380) {  // Desktop
             $('.bars').off('click').on('click', function() {
                 var listaMenu = $('.side-menu');
                 var header = $('.nav-adm');
@@ -16,9 +16,9 @@ $(function(){
                     mainContainer.animate({ width: '100%', marginLeft: 0 }, 500);
                    
                 } else {
-                    listaMenu.show().animate({ width: '20%' }, 500);
-                    header.animate({ width: '80%' , marginLeft: '20%'}, 490);
-                    mainContainer.animate({ width: '70%', marginLeft: '25%' }, 470);
+                    listaMenu.show().animate({ width: '15%' }, 500);
+                    header.animate({ width: '85%' , marginLeft: '15%'}, 490);
+                    mainContainer.animate({ width: '75%', marginLeft: '20%' }, 470);
                 }
             });
         } else {  // Mobile

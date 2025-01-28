@@ -1,6 +1,11 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+use Milly\WebPagePhp\controllers\PainelController;
 if(isset($_GET['loggout'])){
-    Painel::loggout();
+    PainelController::loggout();
 }
 
 ?>
@@ -39,9 +44,9 @@ if(isset($_GET['loggout'])){
         </div>
         <?php }else{?>
             <div class="user-img">
-                <img src="<?php echo INCLUDE_PAINEL_PATH;?>imagens/<?php echo $_SESSION['img']?>">
+                <img src="<?php echo INCLUDE_PAINEL_PATH;?>uplouds/<?php echo$_SESSION['img']?>">
             </div>
-        }
+        
         <?php }?>
         <div class="user">
         <p><?php echo $_SESSION['nome']; ?></p>
@@ -58,7 +63,7 @@ if(isset($_GET['loggout'])){
             <li><a href="">LISTAR SLIDES</a></li>      
 
             <li class="categoria" >ADMINISTRAÇÃO</li>   
-            <li><a href="">EDITAR USUÁRIO</a></li>
+            <li><a href="<?php echo INCLUDE_PAINEL_PATH?>editar-usuario">EDITAR USUÁRIO</a></li>
             <li><a href="">ADICIONAR USUÁRIO</a></li>     
 
 
@@ -81,7 +86,7 @@ if(isset($_GET['loggout'])){
 </div>
 
 <?php
- Painel::carregarPagina();
+ PainelController::carregarPagina();
 
 ?>
 

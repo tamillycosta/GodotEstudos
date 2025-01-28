@@ -26,7 +26,7 @@ body{
 
 .side-menu{
     height: auto;
-    width: 20%;
+    width: 15%;
     background-color: #222D32   ;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     border-radius: 1px; 
@@ -74,8 +74,11 @@ color:  #141a1d;
 
 .user-img img{
     border-radius: 50%;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    background-position: center;
+    background-size: cover;
 }
 
 
@@ -131,7 +134,7 @@ header{
     justify-content: space-between;
    padding:  30px ;
    align-items: center;
-   width: 80%;
+   width: 85%;
   right: 0;
    position: absolute;
    top: 0;
@@ -158,12 +161,11 @@ header i {
 
 .main-container{
     position: absolute;
-    width: 70%;
+    width: 75%;
     height: 100%;
     top: 15%;
-    margin-left: 25%;
+    margin-left: 20%;
     
-
 }
 
 .dashBoard{
@@ -173,7 +175,6 @@ header i {
     align-items: center;
     justify-content: space-evenly;
     background-color: #fff;
-    
     
 }
 
@@ -225,26 +226,30 @@ header i {
 /*    Users-Table    */
 .user-table{
     background: #fff;
-    height: auto;
+    height: 100%;
+
 }
 
 
 .user-table .row{
+    
     color: #777;
-    padding: 8px 0 ;
+ 
     width: 90%;
     margin-left: 5%;
-   
+    padding: 25px 0 ;
+    font-weight: 300;
 }
 
 .clear{
     clear: both;
 }
 
-.row:nth-last-of-type(12){
+.row.first{
+   
     font-weight: bold;
     background-color: #34434a;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     text-align: center;
     color: #ededed;
 }
@@ -294,10 +299,11 @@ header i {
 
 
 
-@media screen and (max-width:880px ){
+@media screen and (max-width:1380px ){
     .side-menu {
         display: none;
     }
+    
     .main-container{
         width: 100%;
         margin-left: 0;

@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
+        'name' => 'milly/web-page-php',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '52f388315f936ba7b62aec4c5d47059073347c78',
+        'reference' => 'bf111358eaca41c93810ab641752be5b9b941cbc',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
+        'milly/web-page-php' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '52f388315f936ba7b62aec4c5d47059073347c78',
+            'reference' => 'bf111358eaca41c93810ab641752be5b9b941cbc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
